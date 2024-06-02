@@ -1,5 +1,4 @@
 # Zombie Survival v4.5p (2007) Fix
-## Restoration on JetBoom's Last GMOD9 ZS Build
 
 ## Bugs:
 - ZombieSurvival.lua crashes gmod9 from function gamerulesStartMap: _EntPrecacheModel("models/player/"..result[i])
