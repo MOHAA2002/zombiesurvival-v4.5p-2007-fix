@@ -1,0 +1,8 @@
+"UnlitGeneric"
+{
+	"$translucent" 1
+	"$basetexture" "deathnotify/d_brains"
+	"$vertexcolor" 0
+	"$ignorez" 1
+	"$additive" 1
+}
