@@ -197,7 +197,7 @@ function onShowHelp(userid)
 	 _GModText_SetText( "Kill the undead to increase your score. You get weapons at certain score levels.\nDie and you will become an Undead! Humans must survive for the time set to win!" )
 	_GModText_Send( userid, 50 )
 	end
-	
+
 	_GModText_Start( "Default" )
 	 _GModText_SetPos( 0.21, 0.36 )
 	 _GModText_SetColor( 255, 255, 255, 255 )
@@ -259,7 +259,7 @@ function ChooseClass(userid, num, seconds)
 end
 
 function DisplayClassMenu(userid)
-	_PlayerOption(userid, "ChooseClass", 99999)	
+	_PlayerOption(userid, "ChooseClass", 99999)
 	 _GModRect_Start( "gmod/white" )
 	 _GModRect_SetPos( 0.77, 0.37, 0.325, 0.25 )
 	 _GModRect_SetColor( 0, 0, 0, 100 )
@@ -476,7 +476,7 @@ function gamerulesStartMap()
 	for i=1, table.getn(result) do
 	    if result[i] ~= "." and result[i] ~= ".." then
 			if _file.Exists( "models/player/"..result[i]) then
-				_EntPrecacheModel("models/player/"..result[i])
+				--_EntPrecacheModel("models/player/"..result[i])
 			end
 		end
 	end
@@ -1340,7 +1340,7 @@ function BottomPrintMessage(userid, msg, r, g, b)
 	 _GModText_SetText( msg )
 	_GModText_Send( userid, 521 )
 end
-	
+
 function SidePrintMessage(userid, msg, r, g, b)
 	_GModRect_Start( "gmod/white" )
 	 _GModRect_SetPos( 0.77, 0.37, 0.325, 0.1 )
