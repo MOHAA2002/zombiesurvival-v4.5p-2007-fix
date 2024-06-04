@@ -13,8 +13,7 @@ end
 
 function SaveNDBtoFile()
     local s = "NDBBackupTracker = "..tostring(NDBBackupTracker).."\n"
-    for userid, data in pairs(players) do
-        local steamid = _PlayerInfo(userid, "networkid")
+    for steamid, data in pairs(ndbdata) do
         s = s .. "ndbdata['" .. steamid .. "'] = {\n"
         s = s .. "\tMoney = " .. data.Money .. ",\n"
         s = s .. "\tZSHumanKills = " .. data.ZSHumanKills .. ",\n"
@@ -62,10 +61,8 @@ NDBHookDisconnect = HookEvent("eventPlayerDisconnect", function(userid)
 end)
 
 function NDB.SaveInfo(userid)
-    if _PlayerInfo(userid, "connected") then
-        local steamid = _PlayerInfo(userid, "networkid")
-        ndbdata[steamid] = players[userid]
-    end
+    local steamid = _PlayerInfo(userid, "networkid")
+    ndbdata[steamid] = players[userid]
 end
 
 function NDB.GlobalSave()
