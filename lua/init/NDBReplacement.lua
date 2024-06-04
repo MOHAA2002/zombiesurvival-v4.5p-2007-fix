@@ -53,13 +53,13 @@ NDBHookSpawn = HookEvent("eventPlayerInitialSpawn", function(userid)
 end)
 
 if NDBHookDisconnect then UnHookEvent(NDBHookDisconnect) end
-NDBHookDisconnect = HookEvent("eventPlayerDisconnect", function(userid)
-    NDB.SaveInfo(userid)
+NDBHookDisconnect = HookEvent("eventPlayerDisconnect", function(name, userid, address, steamid, reason)
+    NDB.SaveInfo(userid, steamid)
     players[userid] = nil
 end)
 
-function NDB.SaveInfo(userid)
-    local steamid = _PlayerInfo(userid, "networkid")
+function NDB.SaveInfo(userid, steamid)
+    steamid = steamid or _PlayerInfo(userid, "networkid")
     ndbdata[steamid] = players[userid]
 end
 
