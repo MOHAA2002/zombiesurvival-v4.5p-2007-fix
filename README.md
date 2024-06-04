@@ -8,8 +8,8 @@
 - [LUA] Error calling 'eventPlayerSpawn' : 'Line 585: attempt to index global 'players' (a nil value)'
 - [LUA] Error calling 'eventPlayerSpawn' : 'Line 602: attempt to index global 'players' (a nil value)'
 - HL2 grenade duplicated with weapon_grenade.lua when spawned in map.
-- Ammo regeneration is not working (unless not present in Lua code).
-- weapon_firezombie.lua missing d_pwn.vtf & d_pwn.vmt.
+- d_pwn.vtf & d_pwn.vmt missing from weapon_firezombie.lua.
 
 ## Fixes:
-- Recreated Human Win Sound (humanvictory.mp3) by using unlife1.mp3 dated from 2006 in v1.10.
+- NDB Database replaced. -Brainles5
+- Recreated human win sound (humanvictory.mp3) by using unlife1.mp3 dated from 2006 in v1.10. -Soldier
