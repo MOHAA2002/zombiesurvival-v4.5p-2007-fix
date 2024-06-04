@@ -31,7 +31,6 @@ if not _file.Exists("lua/ndb/ndb.data") then
     _Msg("NDB: Created Player Data File\n")
 else
     local filecontent = _file.Read("lua/ndb/ndb.data")
-    players = {}
     _RunString(filecontent)
     NDBBackUpFile()
     _Msg("NDB: Loaded Player Data\n")
@@ -52,7 +51,6 @@ NDBHookSpawn = HookEvent("eventPlayerInitialSpawn", function(userid)
         players[userid].Certifications = ""
     end
 end)
-
 
 if NDBHookDisconnect then UnHookEvent(NDBHookDisconnect) end
 NDBHookDisconnect = HookEvent("eventPlayerDisconnect", function(userid)
