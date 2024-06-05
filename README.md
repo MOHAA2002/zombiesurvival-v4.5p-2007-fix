@@ -9,7 +9,6 @@
 ### Medium Priority:
 - HL2 grenade duplicated with weapon_grenade.lua when spawned in map.
 ### Low Priority:
-- d_pwn.vtf & d_pwn.vmt missing from weapon_firezombie.lua.
 
 ## Fixes:
 - NDB Database replaced. -Brainles5
