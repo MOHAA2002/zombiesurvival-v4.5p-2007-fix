@@ -1,7 +1,7 @@
-NDBBackupTracker = 5
+NDBBackupTracker = 0
 ndbdata['STEAM_0:0:20322034'] = {
-	Money = 5,
-	ZSHumanKills = 9,
+	Money = 0,
+	ZSHumanKills = 0,
 	ZSZombieKills = 0,
 	Certifications = '',
 }
