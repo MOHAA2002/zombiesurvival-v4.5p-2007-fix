@@ -1254,7 +1254,6 @@ function EndRound(winner)
 	end
 	ENDROUND = true
 	ROUNDEND = _CurTime()
-	AddTimer(INTERMISSIONTIME, 1, _StartNextLevel)
 	local lastplayer = 0
 	if winner == 1 then
 		if LASTHUMAN then
@@ -1324,7 +1323,7 @@ function EndRound(winner)
 		end
 		_GModRect_Start("gmod/white")
 		_GModRect_SetPos(0, 0, 1, 1)
-		_GModRect_SetColor(255, 255, 255, 255)
+		_GModRect_SetColor(255, 255, 255, 70)
 		_GModRect_SetTime(99999, 2.0, 0)
 		_GModRect_Send(0, 21)
 		for i = 1, _MaxPlayers() do
@@ -1362,6 +1361,7 @@ function EndRound(winner)
 	if NDB ~= nil then
 		NDB.GlobalSave()
 	end
+	AddTimer(INTERMISSIONTIME, 1, _StartNextLevel)
 end
 
 function CenterPrintMessage(userid, msg, r, g, b)
