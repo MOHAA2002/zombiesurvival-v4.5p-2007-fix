@@ -2,11 +2,8 @@
 
 ## Bugs:
 - ZombieSurvival.lua crashes gmod9 from function gamerulesStartMap: _EntPrecacheModel("models/player/"..result[i])
-- Survivors don't become The Undead after being killed.
-- [LUA] Error calling 'eventPlayerKilled' : 'Line 658: attempt to index global 'players' (a nil value)'
-- [LUA] Error calling 'eventNPCKilled' : 'Line 610: attempt to index global 'players' (a nil value)'
-- [LUA] Error calling 'eventPlayerSpawn' : 'Line 585: attempt to index global 'players' (a nil value)'
-- [LUA] Error calling 'eventPlayerSpawn' : 'Line 602: attempt to index global 'players' (a nil value)'
+- Game doesn't end after timer hits 0 or last survivor killed.
+- [LUA] Error calling 'eventPlayerKilled' : 'Line 1199: attempt to index global 'Muted' (a nil value)'
 - HL2 grenade duplicated with weapon_grenade.lua when spawned in map.
 - d_pwn.vtf & d_pwn.vmt missing from weapon_firezombie.lua.
 
