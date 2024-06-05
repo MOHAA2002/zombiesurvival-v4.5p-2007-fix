@@ -2,6 +2,8 @@ players = {} -- Playerdata for current game, uses userid as key
 ndbdata = {} --"Database" data, dont modify this directly from gamemodes. Uses networkid(steamid) as key
 NDB = {}     -- Contains functions to be called from gamemode
 
+BackUpRate = 3 --After how many maploads to create a backup of the data file
+
 --Temporary Backup system
 function NDBBackUpFile()
     NDBBackupTracker = NDBBackupTracker + 1
@@ -32,7 +34,13 @@ if not _file.Exists("lua/ndb/ndb.data") then
 else
     local filecontent = _file.Read("lua/ndb/ndb.data")
     _RunString(filecontent)
-    NDBBackUpFile()
+
+    if BackUpRate == 0 or math.mod(NDBBackupTracker, BackUpRate) == 0 then
+        NDBBackUpFile()
+    else
+        NDBBackupTracker = NDBBackupTracker + 1
+    end
+
     _Msg("NDB: Loaded Player Data\n")
 end
 
