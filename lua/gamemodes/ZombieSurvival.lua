@@ -1299,9 +1299,6 @@ function EndRound(winner)
 					255, 255)
 			end
 		end
-		
-		NDB.GlobalSave()
-
 		_EntFire(HALFLIFEENTITY, "StopSound", "", 0)
 		_EntFire(LASTHUMANENTITY, "StopSound", "", 0)
 		_PlaySound(HUMANWINSOUND)
@@ -1361,6 +1358,9 @@ function EndRound(winner)
 		_GModRect_SetColor(20, 0, 0, 255)
 		_GModRect_SetTime(99999, 4.0, 0)
 		_GModRect_Send(0, 21)
+	end
+	if NDB ~= nil then
+		NDB.GlobalSave()
 	end
 end
 
