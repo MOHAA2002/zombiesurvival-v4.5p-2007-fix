@@ -2,7 +2,7 @@ players = {} -- Playerdata for current game, uses userid as key
 ndbdata = {} --"Database" data, dont modify this directly from gamemodes. Uses networkid(steamid) as key
 NDB = {}     -- Contains functions to be called from gamemode
 
-BackUpRate = 3 --maploads to create a backup of the data file, 0 to disable backup
+BackUpRate = 3 --After how many maploads to create a backup of the data file
 
 --Temporary Backup system
 function NDBBackUpFile()
@@ -35,7 +35,7 @@ else
     local filecontent = _file.Read("lua/ndb/ndb.data")
     _RunString(filecontent)
 
-    if BackUpRate ~= 0 and math.mod(NDBBackupTracker, BackUpRate) == 0 then
+    if BackUpRate == 0 or math.mod(NDBBackupTracker, BackUpRate) == 0 then
         NDBBackUpFile()
     else
         NDBBackupTracker = NDBBackupTracker + 1
@@ -77,6 +77,8 @@ function NDB.GlobalSave()
     end
     SaveNDBtoFile()
 end
+
+AddTimer(180, 0, NDB.GlobalSave)
 
 --The ZS gamemode sends a false for bool, im not sure what its meant to do.
 function NDB.AddMoney(userid, amount, bool)
