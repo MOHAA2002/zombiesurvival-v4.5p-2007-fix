@@ -8,5 +8,5 @@
 - **Add files via upload:** I changed the gib system to not use silentkill due to the flashy effect it causes, ruining the gore effect. Gibs should look better now. -Brainles5
 - **Added Maps:** Newest GMOD9 supported maps or dating after v4.2. -Soldier
 ## Bugs:
-- HL2 grenade duplicated with weapon_grenade.lua when spawned in map.
-- Possible issues in saving user data. Will need more testing.
+- HL2 grenade duplicated with weapon_grenade.lua when spawned in map. -Soldier
+- Possible issues in saving user data. Will need more testing. -Brainles5
