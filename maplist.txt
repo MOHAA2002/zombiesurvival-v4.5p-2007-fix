@@ -1,5 +1,6 @@
 zs_3rdstreet
 zs_aidstransit_v1
+zs_anotherhouse
 zs_asylum_v1
 zs_backstreet_v2b
 zs_barrelfactory
